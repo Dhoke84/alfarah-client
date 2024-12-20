@@ -20,7 +20,7 @@ function UpdateJob() {
   useEffect(() => {
     const fetchJobData = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/jobs/${id}`);
+        const response = await fetch(`https://alfarah-full-stack.vercel.app/jobs/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch job data");
         }
@@ -57,7 +57,7 @@ function UpdateJob() {
     };
 
     try {
-      const response = await fetch(`http://localhost:8080/jobs/${id}`, {
+      const response = await fetch(`https://alfarah-full-stack.vercel.app/jobs/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

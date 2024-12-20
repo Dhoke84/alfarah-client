@@ -19,7 +19,7 @@ const UpdateEvent = () => {
   useEffect(() => {
     const fetchEventData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/events/${id}`);
+        const response = await axios.get(`https://alfarah-full-stack.vercel.app/api/events/${id}`);
         setEventData({
           heading: response.data.heading,
           location: response.data.location,
@@ -54,7 +54,7 @@ const UpdateEvent = () => {
     }
 
     try {
-      await axios.put(`http://localhost:8080/api/events/${id}`, formData, {
+      await axios.put(`https://alfarah-full-stack.vercel.app/api/events/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

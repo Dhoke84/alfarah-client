@@ -12,7 +12,7 @@ function JobsPage() {
 
   // Fetch all jobs when the component mounts
   useEffect(() => {
-    fetch("http://localhost:8080/jobs")
+    fetch("https://alfarah-full-stack.vercel.app/jobs")
       .then((response) => response.json())
       .then((data) => setJobs(data))
       .catch((error) => console.error("Error fetching jobs:", error));
@@ -25,7 +25,7 @@ function JobsPage() {
 
   // Delete a job by ID
   const deleteJob = (id) => {
-    fetch(`http://localhost:8080/jobs/${id}`, {
+    fetch(`https://alfarah-full-stack.vercel.app/jobs/${id}`, {
       method: "DELETE",
     })
       .then((response) => {

@@ -40,7 +40,7 @@ const CreateEvent = () => {
     formData.append('image', eventData.image);
 
     try {
-      await axios.post('http://localhost:8080/api/events/create', formData, {
+      await axios.post('https://alfarah-full-stack.vercel.app/api/events/create', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

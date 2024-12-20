@@ -18,7 +18,7 @@ const NewsPage = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/events');
+        const response = await axios.get('https://alfarah-full-stack.vercel.app/api/events');
         setEvents(response.data);
       } catch (error) {
         console.error("Error fetching events:", error);
@@ -36,7 +36,7 @@ const NewsPage = () => {
 
   const confirmDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8080/api/events/${eventToDelete}`);
+      await axios.delete(`https://alfarah-full-stack.vercel.app/api/events/${eventToDelete}`);
       setEvents(events.filter(event => event._id !== eventToDelete)); // Remove deleted event from the state
       setIsModalOpen(false);
     } catch (error) {
@@ -110,7 +110,7 @@ const NewsPage = () => {
           ) : (
             currentEvents.map((event) => (
               <div key={event._id} className="event-item">
-                <img src={`http://localhost:8080${event.image}`} alt={event.heading} className="event-image" />
+                <img src={`https://alfarah-full-stack.vercel.app${event.image}`} alt={event.heading} className="event-image" />
                 <div className="event-details">
                   <h3>{event.heading}</h3>
                   <p>{event.location}</p>

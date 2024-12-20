@@ -5,7 +5,7 @@ const DeleteJob = () => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/jobs/${jobId}`, {
+      const response = await fetch(`https://alfarah-full-stack.vercel.app/jobs/${jobId}`, {
         method: "DELETE",
       });
       if (response.ok) {

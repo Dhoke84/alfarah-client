@@ -31,7 +31,7 @@ const CreateJobs = () => {
     };
 
     try {
-      await axios.post('http://localhost:8080/jobs/create', dataToSend, {
+      await axios.post('https://alfarah-full-stack.vercel.app/jobs/create', dataToSend, {
         headers: {
           'Content-Type': 'application/json',
         },

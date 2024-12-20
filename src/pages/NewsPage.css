@@ -1,0 +1,211 @@
+/* Main content */
+.news-container {
+    display: flex;
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+    margin-top: 60px; /* Add margin to prevent content from hiding under the fixed header */
+    flex-direction: column; /* Stack content vertically */
+    min-height: 100vh; /* Ensure the container takes up full height */
+  }
+  
+  /* Sidebar (adjusted to allow space for fixed header) */
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #2c3e50;
+    padding-top: 20px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .main-content {
+    flex: 1;
+    width: 80vw;
+    padding: 20px;
+    margin-top: 60px; /* Space below fixed header */
+    margin-bottom: 50px; /* Ensure space for pagination at the bottom */
+    overflow: hidden; /* Prevents overflow beyond the page */
+  }
+  
+  /* Header at the top */
+  .header {
+    position: fixed; /* Make the header fixed at the top */
+    top: 0; /* Position it at the top */
+    left: 270px; /* Align it to the left, considering sidebar width */
+    right: 0; /* Align it to the right */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* White background */
+    padding: 10px 20px; /* Padding around the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+    overflow: hidden; /* Prevents content from overflowing */
+  }
+  
+  /* Header title */
+  .header h2 {
+    font-size: 2rem;
+    margin: 0; /* Remove default margin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflowed text */
+    text-overflow: ellipsis; /* Show ellipsis when text overflows */
+    max-width: 80%; /* Adjust this based on the available space */
+  }
+  
+  /* Add event button */
+  .add-event-btn {
+    background-color: #3498db; /* Updated to blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px; /* Optional: add border-radius for rounded corners */
+  }
+  
+  .add-event-btn:hover {
+    background-color: #2980b9; /* Darker blue when hovered */
+  }
+  
+  /* Event List */
+  .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+    margin-top: 60px; /* Space below header */
+  }
+  
+  /* Modified for 3 events per row */
+  .event-item {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    width: 30%; /* Each event will take up 30% of the container width (3 items per row) */
+    min-width: 280px; /* Ensures event items are at least 280px wide */
+    max-width: 400px; /* Ensures event items don't get too large */
+    box-sizing: border-box;
+  }
+  
+  .event-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .event-details {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  .event-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .edit-btn, .delete-btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+  }
+  
+  .edit-btn:hover, .delete-btn:hover {
+    background-color: #34495e;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center; /* Centers pagination horizontally */
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px; /* Ensure there's space below pagination */
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #2ecc71;
+  }
+  
+  .pagination button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .confirm-btn, .cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .confirm-btn {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .event-item {
+      width: 48%; /* 2 events per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .event-item {
+      width: 100%; /* 1 event per row on very small screens */
+    }
+  }
+  

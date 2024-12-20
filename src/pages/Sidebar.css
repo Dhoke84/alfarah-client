@@ -1,0 +1,81 @@
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #1E3A8A; /* Blue background */
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 230px;
+    background-color: white;
+    padding: 5px 3px;
+   
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu-item {
+    padding: 30px 25px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+    border-bottom: 1px solid #334E9D;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: white; /* Lighter blue */
+    color: #334E9D;
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 90%;
+    padding: 10px;
+    background: white;
+    color: #334E9D;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: whitesmoke;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .menu-item {
+        padding: 12px;
+    }
+
+    .logo img {
+        width: 100px; /* Adjust logo size for smaller screens */
+    }
+}

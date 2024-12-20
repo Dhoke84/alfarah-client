@@ -1,0 +1,75 @@
+
+/* Form Styling */
+.create-event-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80vw; /* Form width set to 80% of the viewport */
+    max-width: 700px;
+
+    margin-left: 200px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    color: #34495e;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #34495e;
+  }
+  
+  .form-group textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  .form-group input[type="file"] {
+    padding: 0;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 48%;
+  }
+  
+  .btn-create {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .btn-create:hover {
+    background-color: #2980b9;
+  }
+  
+  .btn-cancel {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #c0392b;
+  }
